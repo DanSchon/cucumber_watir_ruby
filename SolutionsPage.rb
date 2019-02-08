@@ -1,5 +1,4 @@
 require "./NavigationBar"
-require "./BasePage"
 require 'net/http'
 
 class SolutionsPage 

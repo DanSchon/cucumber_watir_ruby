@@ -1,6 +1,5 @@
 require "./NavigationBar"
 require "./SolutionsPage"
-require "./BasePage"
 
 class LandingPage 
 

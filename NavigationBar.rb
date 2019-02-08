@@ -1,4 +1,3 @@
-require "./BasePage"
 
 class NavigationBar 
 
