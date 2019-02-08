@@ -1,6 +1,6 @@
 require "./BasePage"
 
-class NavigationBar < BasePage
+class NavigationBar 
 
 	def initialize(browser)
 		@browser = browser

@@ -2,7 +2,7 @@ require "./NavigationBar"
 require "./BasePage"
 require 'net/http'
 
-class SolutionsPage < BasePage
+class SolutionsPage 
 
 	attr_reader :navigation_bar
 

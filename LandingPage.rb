@@ -2,7 +2,7 @@ require "./NavigationBar"
 require "./SolutionsPage"
 require "./BasePage"
 
-class LandingPage < BasePage
+class LandingPage 
 
 	attr_reader :navigation_bar
 	attr_reader :base_url
