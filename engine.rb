@@ -6,7 +6,7 @@ require "./SolutionsPage"
 
 Selenium::WebDriver::Chrome.driver_path= File.join(File.dirname(__FILE__), "/executables/chromedriver")
 browser = Watir::Browser.new :chrome
-
+browser.window.maximize
 
 landing_page = LandingPage.new(browser)
 landing_page.navigate()
