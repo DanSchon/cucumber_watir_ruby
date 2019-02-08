@@ -11,5 +11,5 @@ browser.window.maximize
 landing_page = LandingPage.new(browser)
 landing_page.navigate()
 landing_page.navigation_bar.click_solutions_tab()
-# solutions_page = SolutionsPage.new(driver)
-# solutions_page.retrieve_http_code_for_each_link()
+solutions_page = SolutionsPage.new(browser)
+solutions_page.retrieve_http_code_for_each_link()

@@ -1,5 +1,6 @@
 require "./NavigationBar"
 require "./BasePage"
+require 'net/http'
 
 class SolutionsPage < BasePage
 
@@ -10,21 +11,17 @@ class SolutionsPage < BasePage
 		@navigation_bar = NavigationBar.new(browser)
 	end	
 
-	def retrieve_http_code_for_each_link()
-		links = ["Work Opportunity Tax Credit","Verification Services","Research & Development Tax Credit","Sales & Use Tax Incentives","Family Medical Leave Act Tax Credit","Hurricane Disaster Zone Incentives","Cost Segregation","Other Federal & State Tax Incentives","179D Incentives"]
-		
-		# for each link:
-		href = ""
-		links.each do |link_text|
-			 # wait for link to load, 
+	def retrieve_http_code_for_each_link()		
 
-			 # retrieve href attribute of link,
-			 href = @browser.link(text: link_text).href
-			 # get http status of href and print it + name of link to console
-			 #http_code = get(href)
+		links = @browser.links(css: 'div > h1 > a')
+		links.each do |link|
+			link.wait_until(:timeout => 10, &:present?)
+			uri = URI(link.href)
+			res = Net::HTTP.get_response(uri)
+			code = res.code
+			puts "the code for " + link.text + " is: " + code
+		end
 
-			 puts "link '" + link_text + "' has http status code of: " + http_code
-		end	 
 	end
 
 end
