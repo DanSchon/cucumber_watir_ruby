@@ -7,8 +7,8 @@ class NavigationBar < BasePage
 	end	
 
 	def click_solutions_tab()
-		puts "wait for solutions tab to be visible"
-		puts "click on solutions tab"
+		puts "click on solutions tab once it is visible"
+		@browser.link(text: "Solutions").wait_until(:timeout => 10, &:present?).click
 	end
 
 end

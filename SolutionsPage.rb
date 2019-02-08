@@ -19,7 +19,7 @@ class SolutionsPage < BasePage
 			 # wait for link to load, 
 
 			 # retrieve href attribute of link,
-			 href = @browser.link(:text, link_text).href
+			 href = @browser.link(text: link_text).href
 			 # get http status of href and print it + name of link to console
 			 #http_code = get(href)
 
