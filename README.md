@@ -2,5 +2,5 @@
 1. gem install watir    // watir-webdriver is deprecated
 2. gem install cucumber
 
-3. to run using cucumber:
-4. to run using plain ruby without cucumber:
+3. to run on terminal using cucumber:
+4. to run on terminal using plain ruby without cucumber: ruby engine.rb 

@@ -1,4 +1,3 @@
-
 class NavigationBar 
 
 	def initialize(browser)

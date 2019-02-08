@@ -1,4 +1,4 @@
-require "./NavigationBar"
+require_relative "./NavigationBar"
 require 'net/http'
 
 class SolutionsPage 

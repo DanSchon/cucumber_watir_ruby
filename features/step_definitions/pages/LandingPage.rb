@@ -1,5 +1,4 @@
-require "./NavigationBar"
-require "./SolutionsPage"
+require_relative "./NavigationBar"
 
 class LandingPage 
 
